@@ -22,7 +22,7 @@ DATABASES = {
         'USER': env('RDS_DB_USERNAME'),
         'PASSWORD': env('RDS_DB_PASSWORD'),
         'HOST': env('RDS_DB_HOSTNAME'),
-        'PORT': env('RDS_DB_HOST'),
+        'PORT': env('RDS_DB_PORT'),
     }
 }
 # ------------------------------------------------------------------------------
