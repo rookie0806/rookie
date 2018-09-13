@@ -1,0 +1,72 @@
+.auth {
+  width: 100%;
+  max-width: $max-page-width;
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  @include breakpoint(mobileonly) {
+    margin-top : 10px;
+  }
+  .column {
+    margin-top:20px;
+    width: 100%;
+    &:last-child {
+      width: 45%;
+      margin-left: 35px;
+      @include breakpoint(mobileonly) {
+        width : 100%;
+        margin : 0;
+      }
+    }
+    .sentence {
+        margin-top:20px;
+        display:flex;
+        flex-direction: column;
+        font-size: $normal-font-size;
+        font-weight: 600;
+        font-size:$small-font-size;
+        color: $dark-grey;
+        margin-bottom: 15px;
+    }
+    .app-box {
+      height:0px; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0px;
+      .appstores {
+        margin-top: 25px;
+        img {
+          height: 40px;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .white-box {
+      text-align: center;
+      padding: 20px;
+      @include boxBorder(no);
+       @include breakpoint(mobileonly) {
+        background-color: transparent;
+        border:0;
+        margin-top:30px;
+        padding-top : 0px;
+        padding-bottom : 0px;
+       }
+      .change-link {
+        color: $light-blue;
+        cursor: pointer;
+      }
+      p {
+        margin: 35px;
+        font-size:12px;
+        font-weight:bold;
+      }
+    }
+  }
+}

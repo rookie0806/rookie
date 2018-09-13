@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from . import models
 from rookie.users import models as user_models
+from taggit_serializer.serializers import (TagListSerializerField,TaggitSerializer)
 
 class FeedUserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,10 +11,24 @@ class FeedUserSerializer(serializers.ModelSerializer):
             'profileimg',
         )
 
-class MusicSerializer(serializers.ModelSerializer):
+
+class MusicSerializer(TaggitSerializer,serializers.ModelSerializer):
+    tags = TagListSerializerField()
     class Meta:
         model = models.Music
-        fields = '__all__'
+        fields = (
+            "Music_name",
+            "Singer_name",
+            "Album_name",
+            "Server_img",
+            "Grade",
+            "tags",
+            "Melon_serial",
+            "Genie_serial",
+            "Bugs_serial",
+            "Mnet_serial",
+            "Naver_serial",
+        )
 
 class ListSerializer(serializers.ModelSerializer):
     Song_list = MusicSerializer(many=True)

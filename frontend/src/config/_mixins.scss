@@ -1,0 +1,54 @@
+@mixin breakpoint($point){
+    @if $point==desktop {
+        @media (max-width:70em){
+            @content;
+        }
+    }
+    @else if $point == laptop{
+        @media (max-width:64em) {
+            @content;
+        }
+    }
+    @else if $point==tablet {
+        @media (max-width: 50em) {
+            @content;
+        }
+    }
+    @else if $point==phablet {
+        @media (max-width: 37.5em) {
+
+            @content;
+        }
+    }
+    @else if $point==mobileonly {
+        @media (max-width: 42em) {
+            @content;
+        }
+    }
+}
+@mixin boxBorder($radius) {
+  border: 1px solid #e6e6e6;
+  background-color: white;
+  @if $radius==yes {
+    border-radius: 5px;
+  }
+}
+
+@mixin blueButton(){
+    -webkit-appearance: none;
+    border-radius : 3px;
+    background-color : $light-blue;
+    color: white;
+    font-weight: 600;
+    border : 0;
+    width: 100%;
+    font-size : $normal-font-size;
+    line-height: 26px;
+    &:focus,
+    &:active{
+        outline: none;
+    }
+    &:active{
+        opacity: 0.9;
+    }
+}

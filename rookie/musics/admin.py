@@ -10,6 +10,9 @@ class MusicAdmin(admin.ModelAdmin):
     list_display = (
         'Music_name',
         'Singer_name',
+        'Album_name',
+        'Grade',
+        'Parsing_time',
     )
 
 @admin.register(models.List)
@@ -20,6 +23,7 @@ class ListAdmin(admin.ModelAdmin):
     list_display = (
         'List_name',
         'List_creator',
+        'List_time',
         'List_serial',
     )
 
