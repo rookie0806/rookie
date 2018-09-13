@@ -10,6 +10,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
+    'rds.amazonaws.com',
     '.compute-1.amazonaws.com',  # allows viewing of instances directly
     '.elasticbeanstalk.com'
 ]
