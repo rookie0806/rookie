@@ -37,6 +37,7 @@ django-taggit = "*"
 djangorestframework-jwt = "*"
 django-cors-headers = "*"
 django-taggit-serializer = "*"
+awsebcli = "*"
 
 [requires]
 python_version = "3.6"
