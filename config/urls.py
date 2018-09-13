@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^musics/', include("rookie.musics.urls", namespace="musics")),
     url(r'^users/', include("rookie.users.urls", namespace="users")),
     url(r'^accounts/', include('allauth.urls')),
-    #url(r'^', views.ReactAppView.as_view()),
+    url(r'^', views.ReactAppView.as_view()),
     # Your stuff: custom urls includes go here
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
