@@ -15,7 +15,6 @@ from rookie.users import models as user_models
 class ListTop100(APIView):
     permission_classes = (AllowAny,)
     def get(self, request, format=None):
-        
         List = models.Music.objects.filter(Parsing_time="2018090818").order_by('Grade')[:100]
         serializer = serializers.MusicSerializer(List,many=True)
 
